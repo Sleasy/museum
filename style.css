@@ -1,0 +1,625 @@
+ @font-face {
+     font-family: Forum;
+     src: url(../Museum/assets/fonts/Forum-Regular.ttf);
+ }
+
+  @font-face {
+    font-family: Roboto;
+    src: url("../Museum/assets/fonts/Roboto-Thin.ttf");
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: Roboto;
+    src: url("../Museum/assets/fonts/Roboto-Light.ttf");
+    font-weight: 300;
+  }
+
+ /*---Normalize.css---*/
+
+ html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
+  
+  main {
+    display: block;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+
+  pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+
+  a {
+    background-color: transparent;
+    text-transform: none;
+    text-decoration: none;
+    color: black;
+  }
+
+  abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+  }
+
+  b,
+  strong {
+    font-weight: bolder;
+  }
+
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+
+  small {
+    font-size: 80%;
+  }
+
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+
+  img {
+    border-style: none;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; 
+    font-size: 100%; 
+    line-height: 1.15; 
+    margin: 0; 
+  }
+
+  button,
+  input { 
+    overflow: visible;
+  }
+
+  button,
+  select {
+    text-transform: none;
+  }
+
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+
+  legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+  }
+
+  progress {
+    vertical-align: baseline;
+  }
+
+  textarea {
+    overflow: auto;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+  [type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+  }
+
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+  }
+
+  details {
+    display: block;
+  }
+
+  summary {
+    display: list-item;
+  }
+
+  template {
+    display: none;
+  }
+
+  [hidden] {
+    display: none;
+  }
+
+  /*---Normalize.css---*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    background: #030303;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1440px;
+    height: 200px;
+    width: calc(100% - 40px);
+}
+
+.header_logo.logo {
+    display: flex;
+    max-width: 195px;
+    max-height: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.header_logo-img {
+    background-image: url("../Museum/assets/svg/Frame.svg");
+    width: 50px;
+    height: 34px;
+
+}
+
+.header_text {
+    margin-left: 20px;
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.header_navigation {
+    justify-content: flex-end;
+    max-width: 720px;
+    flex-grow: 1;
+}
+
+.header_navigation ul {
+    display: flex;
+    max-width: 720px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_navigation ul li {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.header_navigation ul li:last-child {
+  padding-right: 0;
+}
+
+.header_navigation li > a {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 50px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.header_navigation li > a:hover {
+    color: #9D8665;
+}
+
+.header_navigation li > a:active {
+    color: #9D8665;
+}
+
+.welcome {
+  background: #030303 url("../Museum/assets/img/background.jpg") no-repeat;
+  background-size: 1215px 750px;
+  margin: 0;
+  padding: 0;
+  background-position: calc(50% + 352px) calc(100%);
+  height: 750px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: calc(100% - 40px);
+}
+
+.section-title-welcome {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 90px;  
+  letter-spacing: 5px;
+  text-transform: uppercase;  
+  color: #FFFFFF;
+  padding: 114px 0 0 0;
+  max-width: 600px;
+}
+
+.section-welcome-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;  
+  letter-spacing: 2px;  
+  color: #FFFFFF;
+  margin-top: 26px;
+}
+
+.button {
+  margin: 76px 0 0 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  width: 360px;
+  height: 75px;
+  background: #710707;
+  border-radius: 10px;
+  border: 0;
+}
+
+.button:hover {
+  background: #9D8665;
+}
+
+.visiting {
+  background-color: #ffffff;
+  margin: 0 0 75px 0;
+}
+
+.section-title-white {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 90px;  
+  letter-spacing: 5px;
+  text-transform: uppercase;  
+  color: #9D8665;
+  padding: 75px 0 0 0px;
+}
+
+.underline-title {
+  position: relative;
+}
+.underline-title::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #710707;
+}
+
+.visiting-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 103px 0 0 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 78px 60px;
+}
+
+.card-title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase; 
+  color: #000000;
+  margin: 25px 0 0 0;
+}
+
+.underline-card {
+  position: relative;
+}
+
+.underline-card::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  right: 140px;
+  height: 2px;
+  background-color: #710707;
+}
+
+.card-text-1 {
+  margin: 21px 0 10px 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+}
+  .card-text-2 {
+  margin: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.explore {
+  background-color: #030303;
+  margin: 0 0 0 0;
+}
+
+.explore-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 0 75px 0;
+  gap: 60px;
+}
+
+.section-title-black {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 90px;  
+  letter-spacing: 5px;
+  text-transform: uppercase;  
+  color: #FFFFFF;
+  padding: 75px 0 0 0;
+  margin: 0;
+}
+
+.explore-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 660px;
+  margin: 0;
+  padding: 0;
+}
+
+.underline-explore {
+  position: relative;
+  margin: 0 0 103px 0;
+  padding: 0;
+}
+
+.underline-explore::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0px;
+  height: 3px;
+  background-color: #710707;
+}
+
+.explore-text {
+  margin: 0;
+  padding: 0;
+}
+
+.explore-text p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: #FFFFFF;
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+
+.explore-text p:last-child {
+  margin: 0;
+}
+
+.explore-text p span {
+  color: #9D8665;
+}
+
+.video {
+  padding: 90px 0 75px 0;
+}
+
+.video-item {
+  position: relative;
+  max-width: 1440px;
+  max-height: 629px;
+}
+
+.video-item img {
+  width: 100%;
+  height: auto;
+}
+
+.play-button {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+}
+
+.play-button:hover {
+  filter: invert(30%);
+}
+
+.video-buttons {
+  display: flex;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  width: 1440px;
+  height: 85px;
+}
+
+.video-buttons-block {
+  display: flex;
+  width: 241px;
+}
+
+.video-buttons-block-item {
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 auto;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+} 
+
+.video-button-item {
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.video-line, .volume-line {
+  align-self: center;
+}
+
+.video-button-item:hover {
+  filter: invert(50%);
+}
+
+.video-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+.section-title-white-video {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 90px;  
+  letter-spacing: 5px;
+  text-transform: uppercase;  
+  color: #9D8665;
+  padding: 40px 0 0 0;
+}
+
+.video-text p {
+  max-width: 720px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: #000000;
+  padding: 40px 0 0 0;
+}
